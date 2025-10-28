@@ -39,7 +39,7 @@ void solve() {
 
     // 初始化树状数组
     for (int i = 1; i <= n; i++) {
-        update(t, i, a[i]-a[i-1]);
+        update(t, i, a[i] - a[i - 1]);
     }
 
     // 处理查询操作
@@ -48,17 +48,17 @@ void solve() {
         cin >> op;
         if (op == 1) {
             // 更新操作：将数组中某个位置的值增加指定值
-            int x, y,k;
+            int x, y, k;
             cin >> x >> y >> k;
             update(t, x, k);
-            update(t, y+1, -k);
+            update(t, y + 1, -k);
 
         }
         else {
             // 查询操作：计算区间和
             int x;
             cin >> x;
-            cout << sum(t,x) << "\n";
+            cout << sum(t, x) << "\n";
         }
     }
 }

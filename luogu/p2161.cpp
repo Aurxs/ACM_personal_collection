@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-vector<long long> v;//维护st
+vector<long long> v; //维护st
 
 int lowbit(int x) {
     return x & -x;
@@ -25,8 +25,8 @@ long long sum(int idx) {
 int main() {
     int n, ans = 0;
     cin >> n;
-    vector<long long> t(2e5+10);//维护ed
-    v.resize(2e5+10);
+    vector<long long> t(2e5 + 10); //维护ed
+    v.resize(2e5 + 10);
     for (int i = 1; i <= n; i++) {
         char temp;
         cin >> temp;
@@ -51,15 +51,15 @@ int main() {
                     }
                     else r = mid - 1;
                 }
-                int pos = idx + 1; // 要删除的位置
+                int pos = idx + 1; // 要删除的位置，1-base
                 // 我们已经满足了重叠的第一个条件 st_old <= ed (因为 pos <= ed)。
                 // 现在检查第二个条件：st <= ed_old
                 // t[pos] 就是这个日程的结束时间 ed_old
                 if (t[pos] >= st) {
                     // 两个条件都满足！说明日程 [pos, t[pos]] 和新日程 [st, ed] 重叠了。
                     update(pos, -1);
-                    ans1++;//删除数+1
-                    ans--;//总日程数-1
+                    ans1++; //删除数+1
+                    ans--;  //总日程数-1
                 }
                 else {
                     // 如果连这个开始时间最晚的都不满足第二个条件，
@@ -68,9 +68,9 @@ int main() {
                     break;
                 }
             }
-            update(st, 1);//将新日程加入至树状数组
-            t[st] = ed;//记录ed
-            ans++;//总日程数+1
+            update(st, 1); //将新日程加入至树状数组
+            t[st] = ed;    //记录ed
+            ans++;         //总日程数+1
             cout << ans1 << endl;
         }
         else

@@ -8,30 +8,7 @@
 
 using namespace std;
 
-vector<int> sieve(int n) {
-    vector is_prime(n + 1, true);
-    if (n >= 0) {
-        is_prime[0] = false;
-    }
-    if (n >= 1) {
-        is_prime[1] = false;
-    }
-    for (int p = 2; p * p <= n; p++) {
-        if (is_prime[p]) {
-            for (int i = p * p; i <= n; i += p)
-                is_prime[i] = false;
-        }
-    }
-    vector<int> primes;
-    for (int p = 2; p <= n; p++) {
-        if (is_prime[p]) {
-            primes.push_back(p);
-        }
-    }
-    return primes;
-}
-
-vector<int> primes = sieve(1e4);
+vector primes = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53};
 
 void solve() {
     long long n;

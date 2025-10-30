@@ -56,7 +56,7 @@ int main() {
     vals.erase(ranges::unique(vals).begin(), vals.end()); // 24) 去重：得到严格递增的“去重值表”
     //     rank(x) = lower_bound(vals, x) - vals.begin() + 1
 
-    BIT.assign((int) vals.size() + 1, 0); // 25) 初始化树状数组，长度 M+1（丢弃 0 号位，1-based）
+    BIT.assign((int) vals.size() + 1, 0); // 25) 初始化树状数组，长度 M+1（丢弃 0 号位，1-based）BIT[i+1]->vals[i]
     long long ans = 0; // 26) 逆序对计数（最大 ~ n*(n-1)/2，需 64 位）
     for (int i = 0; i < n; ++i) {
         // 27) 从左到右扫描 a[0..n-1]

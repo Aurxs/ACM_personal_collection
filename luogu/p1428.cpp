@@ -19,7 +19,7 @@ void solve() {
     for (int i = 0; i < n; i++) {
         int ans = 0;
         for (int j = 0; j < i; j++) {
-            if (a[i] > b[j]) {ans++;}
+            if (a[i] > b[j]) ans++;
         }
         cout << ans << " ";
         b.push_back(a[i]);

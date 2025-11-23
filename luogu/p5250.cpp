@@ -20,12 +20,10 @@ void solve() {
             auto k = s.find(b);
             if (k == s.end()) {
                 s.insert(b);
-            }
-            else {
+            } else {
                 cout << "Already Exist" << "\n";
             }
-        }
-        else {
+        } else {
             if (s.empty()) {
                 cout << "Empty" << "\n";
                 continue;
@@ -34,24 +32,20 @@ void solve() {
             if (k != s.end()) {
                 cout << b << "\n";
                 s.erase(k);
-            }
-            else {
+            } else {
                 auto it = s.lower_bound(b);
                 if (it == s.begin()) {
                     cout << *it << "\n";
                     s.erase(it);
-                }
-                else if (it == s.end()) {
+                } else if (it == s.end()) {
                     cout << *(--it) << "\n";
                     s.erase(it);
-                }
-                else {
+                } else {
                     auto p = prev(it);
                     if (*it - b < b - *p) {
                         cout << *it << "\n";
                         s.erase(it);
-                    }
-                    else {
+                    } else {
                         cout << *p << "\n";
                         s.erase(p);
                     }

@@ -35,7 +35,6 @@ void solve() {
             cout << v[n][i];
         }
     }
-
 }
 
 int main() {

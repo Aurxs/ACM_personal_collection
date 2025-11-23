@@ -31,7 +31,7 @@ void solve() {
                 break;
             }
         }
-        const auto m = min_element(v.begin() + l, v.begin()+r);
+        const auto m = min_element(v.begin() + l, v.begin() + r);
         const int a = *m;
         ans += a;
         for (int i = l; i < r; i++) {

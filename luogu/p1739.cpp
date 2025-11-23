@@ -12,7 +12,7 @@ void solve() {
     getline(cin, str, '@');
     stack<char> s;
     bool is_valid = true;
-    for (char c : str) {
+    for (char c: str) {
         if (c == '(') {
             s.push(c);
         } else if (c == ')') {

@@ -42,13 +42,12 @@ void solve() {
         mi = min(mi, cnt);
         ma = max(ma, cnt);
     }
-    int n = ma-mi;
+    int n = ma - mi;
     vector<int> primes = sieve(n);
     if (ranges::count(primes, n) == 1) {
         cout << "Lucky Word" << endl;
         cout << n << endl;
-    }
-    else {
+    } else {
         cout << "No Answer" << endl;
         cout << 0 << endl;
     }

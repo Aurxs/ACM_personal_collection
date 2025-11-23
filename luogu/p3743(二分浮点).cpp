@@ -33,8 +33,7 @@ int main() {
         double mid = (l + r) / 2;
         if (check(mid, p, a, b)) {
             l = mid;
-        }
-        else {
+        } else {
             r = mid;
         }
     }

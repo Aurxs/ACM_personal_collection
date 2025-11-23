@@ -21,7 +21,7 @@ void solve() {
         c.erase(c.begin() + i);
     }
     sort(c.begin(), c.end());
-    for (int i : c) {
+    for (int i: c) {
         cout << i << " ";
     }
 }

@@ -23,7 +23,7 @@ void solve() {
     }
     ranges::sort(a, cmp);
     long long sum = 0, ans = -100000000;
-    for (const auto &[w,s] : a) {
+    for (const auto &[w,s]: a) {
         ans = max(ans, sum - s);
         sum += w;
     }

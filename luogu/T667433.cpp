@@ -23,7 +23,7 @@ void solve() {
     for (int i = 0; i < n && modr > 0; i++) {
         if (a[i] > avg) {
             long long r = a[i] - avg;
-            long long numr = min((long long)modr, r);
+            long long numr = min((long long) modr, r);
             a[i] -= numr;
             modr -= numr;
         }

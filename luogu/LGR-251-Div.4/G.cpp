@@ -24,8 +24,7 @@ void solve() {
         char c = s[i];
         if (c == 'a' || c == 'b') {
             s1.push(c);
-        }
-        else if (c >= '0' && c <= '9') {
+        } else if (c >= '0' && c <= '9') {
             long long x = 0;
             while (s[i] != ']') {
                 x = x * 10 + (s[i] - '0');
@@ -33,8 +32,7 @@ void solve() {
             }
             value.push(x);
             i--;
-        }
-        else if (c == ']') {
+        } else if (c == ']') {
             if (!s1.empty() && !value.empty()) {
                 char temp = s1.top();
                 s1.pop();

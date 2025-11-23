@@ -9,7 +9,7 @@ using namespace std;
 void solve() {
     int time, n;
     cin >> time >> n;
-    vector<pair<int, int>> m(n + 1);
+    vector<pair<int, int> > m(n + 1);
     for (int i = 1; i <= n; i++) {
         cin >> m[i].first >> m[i].second;
     }

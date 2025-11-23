@@ -17,7 +17,7 @@ void solve() {
     for (int i = 0; i < n; i++) {
         cin >> v[i];
     }
-    for (long long i : primes) {
+    for (long long i: primes) {
         bool flag = false;
         for (int j = 0; j < n; j++) {
             if (v[j] % i != 0) {

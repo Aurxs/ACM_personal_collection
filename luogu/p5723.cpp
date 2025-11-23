@@ -35,7 +35,7 @@ void solve() {
     vector<int> prime = sieve(n);
     long long temp = 0;
     int ans = 0;
-    for (int p : prime) {
+    for (int p: prime) {
         if (temp + p <= n) {
             temp += p;
             cout << p << endl;

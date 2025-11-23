@@ -37,8 +37,7 @@ void solve() {
         if (check(a, mid, m)) {
             ans = mid; //因为mid是一个可能的值，所以应该放这里，而不是下面
             r = mid - 1;
-        }
-        else l = mid + 1;
+        } else l = mid + 1;
     }
     cout << ans << endl;
 }

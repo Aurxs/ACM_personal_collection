@@ -25,7 +25,7 @@ void solve() {
             s[i] = a[l - 1 + i];
         }
         vector<long long> dp(c + 1, 0);
-        for (const auto &[w, v] : s) {
+        for (const auto &[w, v]: s) {
             for (int j = c; j >= w; --j) {
                 dp[j] = max(dp[j], dp[j - w] + v);
             }

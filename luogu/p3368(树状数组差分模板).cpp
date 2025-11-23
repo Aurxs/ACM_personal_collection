@@ -29,7 +29,7 @@ long long sum(const vector<long long> &v, int idx) {
 void solve() {
     int n, q; // n为数组大小，q为查询数量
     cin >> n >> q;
-    vector<int> a(n + 1);          // 输入数组（1-based）
+    vector<int> a(n + 1); // 输入数组（1-based）
     vector<long long> t(n + 1, 0); // 树状数组（1-based）
 
     // 读取输入数组
@@ -52,9 +52,7 @@ void solve() {
             cin >> x >> y >> k;
             update(t, x, k);
             update(t, y + 1, -k);
-
-        }
-        else {
+        } else {
             // 查询操作：计算区间和
             int x;
             cin >> x;
@@ -65,7 +63,7 @@ void solve() {
 
 int main() {
     ios::sync_with_stdio(false); // 提高输入输出效率
-    cin.tie(nullptr);            // 解除cin与cout的绑定
+    cin.tie(nullptr); // 解除cin与cout的绑定
 
     solve(); // 调用解决函数
 

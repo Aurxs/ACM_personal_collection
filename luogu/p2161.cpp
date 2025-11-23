@@ -48,8 +48,7 @@ int main() {
                     if (sum(mid) < k) {
                         idx = mid;
                         l = mid + 1;
-                    }
-                    else r = mid - 1;
+                    } else r = mid - 1;
                 }
                 int pos = idx + 1; // 要删除的位置，1-base
                 // 我们已经满足了重叠的第一个条件 st_old <= ed (因为 pos <= ed)。
@@ -59,9 +58,8 @@ int main() {
                     // 两个条件都满足！说明日程 [pos, t[pos]] 和新日程 [st, ed] 重叠了。
                     update(pos, -1);
                     ans1++; //删除数+1
-                    ans--;  //总日程数-1
-                }
-                else {
+                    ans--; //总日程数-1
+                } else {
                     // 如果连这个开始时间最晚的都不满足第二个条件，
                     // 那么其他开始时间更早的，也肯定不会满足。
                     // 所以可以直接确定，没有更多重叠的了。
@@ -69,11 +67,10 @@ int main() {
                 }
             }
             update(st, 1); //将新日程加入至树状数组
-            t[st] = ed;    //记录ed
-            ans++;         //总日程数+1
+            t[st] = ed; //记录ed
+            ans++; //总日程数+1
             cout << ans1 << endl;
-        }
-        else
+        } else
             cout << ans << endl;
     }
     return 0;

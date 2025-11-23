@@ -17,8 +17,8 @@ void solve() {
     const long one = ranges::count(s, '1');
     const long two = ranges::count(s, '2');
     //需要特判？是否重叠，不然影响-，需要补回-
-    if (zero+one+two >= n) {
-        cout << string(n,'-') << "\n";
+    if (zero + one + two >= n) {
+        cout << string(n, '-') << "\n";
         return;
     }
     vector<string> v(n, " ");

@@ -19,7 +19,6 @@ void solve() {
         }
     }
     cout << f[w] << endl;
-
 }
 
 int main() {

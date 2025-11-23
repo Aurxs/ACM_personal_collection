@@ -23,8 +23,7 @@ void solve() {
             int k = e - sch.begin();
             if (e != sch.begin()) ans += min(abs(sch[k - 1] - stu[i]), abs(sch[k] - stu[i]));
             else ans += abs(sch[k] - stu[i]);
-        }
-        else ans += abs(sch[m-1] - stu[i]);
+        } else ans += abs(sch[m - 1] - stu[i]);
     }
     cout << ans << endl;
 }

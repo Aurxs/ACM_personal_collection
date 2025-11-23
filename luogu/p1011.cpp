@@ -49,8 +49,7 @@ int main() {
 
     if (x <= 2) {
         cout << a << endl;
-    }
-    else {
+    } else {
         // S[x] = Sa[x-1]*a + Sk[x-1]*k
         cout << Sa[x - 1] * a + Sk[x - 1] * k << endl;
     }

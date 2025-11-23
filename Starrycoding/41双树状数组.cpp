@@ -61,8 +61,7 @@ void solve() {
             long long k;
             cin >> l >> r >> k;
             range_add(t1, t2, l, r, k);
-        }
-        else if (op == 2) {
+        } else if (op == 2) {
             int l, r;
             cin >> l >> r;
             cout << range_sum(t1, t2, l, r) << "\n";

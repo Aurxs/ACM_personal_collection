@@ -24,7 +24,7 @@ void solve() {
         v.emplace_back(x, y);
     }
     ranges::sort(v, cmp);
-    for (const auto &[weight, value] : v) {
+    for (const auto &[weight, value]: v) {
         if (t == 0) break;
         if (weight <= t) {
             ans += value;

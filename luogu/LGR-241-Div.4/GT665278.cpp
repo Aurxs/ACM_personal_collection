@@ -36,7 +36,7 @@ void solve() {
     int now_h, now_m;
 
     map<string, Patient> appointments;
-    map<string, vector<Patient>> doctor_queues;
+    map<string, vector<Patient> > doctor_queues;
     set<string> registered_patients;
 
     int T;
@@ -78,7 +78,6 @@ void solve() {
             doctor_queues[p.doctor].push_back(p);
             appointments.erase(patient_name);
             registered_patients.insert(patient_name);
-
         } else if (event_type == "query") {
             string doctor_name;
             cin >> doctor_name;

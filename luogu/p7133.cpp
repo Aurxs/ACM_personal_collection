@@ -29,19 +29,20 @@ void solve() {
         cin >> target_dir.first >> target_dir.second;
 
         int ccw_count = 0; // 逆时针 (counter-clockwise)
-        int cw_count = 0;  // 顺时针 (clockwise)
+        int cw_count = 0; // 顺时针 (clockwise)
 
         // 通过叉积判断从 current_dir 到 target_dir 的最短旋转方向
         long long cp_dirs = cross_product(current_dir, target_dir);
 
-        for (const auto &star : stars) {
+        for (const auto &star: stars) {
             long long cp_start = cross_product(current_dir, star);
             long long cp_end = cross_product(target_dir, star);
 
             bool in_ccw_sweep = false;
             bool in_cw_sweep = false;
 
-            if (cp_dirs > 0) { // 最短路径是逆时针
+            if (cp_dirs > 0) {
+                // 最短路径是逆时针
                 if (cp_start >= 0 && cp_end <= 0) {
                     in_ccw_sweep = true;
                 }
@@ -49,7 +50,8 @@ void solve() {
                 if (!in_ccw_sweep) {
                     in_cw_sweep = true;
                 }
-            } else if (cp_dirs < 0) { // 最短路径是顺时针
+            } else if (cp_dirs < 0) {
+                // 最短路径是顺时针
                 if (cp_start <= 0 && cp_end >= 0) {
                     in_cw_sweep = true;
                 }
@@ -57,7 +59,8 @@ void solve() {
                 if (!in_cw_sweep) {
                     in_ccw_sweep = true;
                 }
-            } else { // cp_dirs == 0, 方向相反
+            } else {
+                // cp_dirs == 0, 方向相反
                 if (cp_start >= 0) {
                     in_ccw_sweep = true;
                 }

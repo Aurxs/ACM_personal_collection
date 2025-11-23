@@ -17,8 +17,7 @@ void solve() {
         if (n % 2 == 0) {
             n /= 2;
             a.push_back(n);
-        }
-        else {
+        } else {
             n = n * 3 + 1;
             a.push_back(n);
         }

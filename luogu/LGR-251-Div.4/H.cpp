@@ -26,8 +26,7 @@ void solve() {
                     v[j][i] = '.';
                 }
                 pre--;
-            }
-            else if (v[j][i] == '-') {
+            } else if (v[j][i] == '-') {
                 pre = j - 1;
             }
         }

@@ -9,7 +9,7 @@
 using namespace std;
 
 string f(string a, long long b) {
-    string t = a[a.length()-1] + a.substr(0, a.length()-1);
+    string t = a[a.length() - 1] + a.substr(0, a.length() - 1);
     a = a + t;
     if (a.length() < b) a = f(a, b);
     return a;
@@ -20,7 +20,7 @@ void solve() {
     string s;
     cin >> s >> n;
     string ans = f(s, n);
-    cout << ans[n-1] << endl;
+    cout << ans[n - 1] << endl;
 }
 
 int main() {

@@ -11,7 +11,7 @@ using namespace std;
 void solve() {
     int n;
     cin >> n;
-    priority_queue<long long,vector<long long>,greater<>> q;
+    priority_queue<long long, vector<long long>, greater<> > q;
     for (int i = 0; i < n; i++) {
         int t;
         cin >> t;

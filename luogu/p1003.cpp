@@ -8,7 +8,7 @@ using namespace std;
 void solve() {
     int T;
     cin >> T;
-    vector<tuple<int, int, int, int>> carpets;
+    vector<tuple<int, int, int, int> > carpets;
 
     for (int i = 0; i < T; i++) {
         int a, b, x, y;

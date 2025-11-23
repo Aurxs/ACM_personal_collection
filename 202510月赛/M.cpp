@@ -28,7 +28,7 @@ int main() {
     long long ans = 0;
     for (int i = 0; i < m.size(); i++) {
         if (k) {
-            if (m[i].first>=3) {
+            if (m[i].first >= 3) {
                 k--;
                 continue;
             }

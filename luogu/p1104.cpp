@@ -29,7 +29,7 @@ void solve() {
     }
     ranges::sort(v, cmp);
     for (int i = 0; i < n; i++) {
-        cout << get<0>(v[i]) << endl;
+        cout << get < 0 > (v[i]) << endl;
     }
 }
 

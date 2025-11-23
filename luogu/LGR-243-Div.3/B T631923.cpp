@@ -20,11 +20,11 @@ void solve() {
             cout << 1 << endl;
             return;
         }
-        if (m==2) {
+        if (m == 2) {
             cout << 1 << endl;
             return;
         }
-        if (y1==y2) {
+        if (y1 == y2) {
             cout << 3 << endl;
             return;
         }
@@ -52,7 +52,6 @@ void solve() {
                     return;
                 }
             }
-
         }
         if (y1 == y2) {
             if (abs(x2 - x1) % 2 == 0) {

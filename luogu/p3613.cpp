@@ -17,8 +17,7 @@ void solve() {
         if (a == 1) {
             cin >> x >> y >> k;
             mp[{x, y}] = k;
-        }
-        else {
+        } else {
             cin >> x >> y;
             cout << mp[{x, y}] << endl;
         }

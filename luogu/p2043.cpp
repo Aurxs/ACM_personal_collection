@@ -29,7 +29,7 @@ void solve() {
     cin >> n;
     vector<int> primes = prime(n);
     vector<pair<int, int> > factors;
-    for (int p : primes) {
+    for (int p: primes) {
         factors.emplace_back(p, 0);
     }
     for (int i = 1; i <= n; i++) {

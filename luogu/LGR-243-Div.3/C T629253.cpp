@@ -9,9 +9,9 @@
 using namespace std;
 
 void solve() {
-    int n, m, k, h,x = 0;
+    int n, m, k, h, x = 0;
     cin >> n >> m >> k >> h;
-    priority_queue<long long, vector<long long>, greater<>> pq;
+    priority_queue<long long, vector<long long>, greater<> > pq;
     for (int i = 0; i < n; i++) {
         cin >> x;
         pq.push(x);
@@ -24,7 +24,7 @@ void solve() {
     for (int i = 0; i < m; i++) {
         x = pq.top();
         pq.pop();
-        pq.push(x+1);
+        pq.push(x + 1);
     }
     cout << pq.top() << endl;
 }

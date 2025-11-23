@@ -26,8 +26,7 @@ void solve() {
             if (a[i] < a[i] + a[i - 1] - x) {
                 a[i] = 0;
                 a[i - 1] -= x - a[i];
-            }
-            else a[i] -= a[i] + a[i - 1] - x;
+            } else a[i] -= a[i] + a[i - 1] - x;
         }
     }
     cout << ans << endl;

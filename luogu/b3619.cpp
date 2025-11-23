@@ -10,9 +10,9 @@ using namespace std;
 void solve() {
     string dict = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     string s = "";
-    int n,x;
+    int n, x;
     cin >> n >> x;
-    while (n!=0) {
+    while (n != 0) {
         s = dict[n % x] + s;
         n /= x;
     }

@@ -9,9 +9,9 @@
 using namespace std;
 
 void solve() {
-    long long n,m;
-    cin>>n>>m;
-    cout << n*m << endl;
+    long long n, m;
+    cin >> n >> m;
+    cout << n * m << endl;
 }
 
 int main() {

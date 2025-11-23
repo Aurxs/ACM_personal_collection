@@ -15,7 +15,7 @@ void solve() {
     if (len == 1) cout << "Yes";
     else {
         for (int i = len - 1; i > 0; i--) {
-            if (n[i]!='0') {
+            if (n[i] != '0') {
                 cout << "No";
                 return;
             }

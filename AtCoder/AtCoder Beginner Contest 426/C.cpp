@@ -28,7 +28,7 @@ void solve() {
         }
         if (cnt > 0) {
             mp[y] += cnt;
-            for (int j : v) {
+            for (int j: v) {
                 mp.erase(j);
             }
         }

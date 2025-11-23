@@ -16,7 +16,7 @@ void solve() {
     long long x = 0, y = 0;
     long long ans = 0;
 
-    for (char c : a) {
+    for (char c: a) {
         if (c == 'U')
             y++;
         else if (c == 'D')
@@ -35,7 +35,7 @@ void solve() {
         long long temp_x = (k - 1) * dx;
         long long temp_y = (k - 1) * dy;
 
-        for (char c : a) {
+        for (char c: a) {
             if (c == 'U')
                 temp_y++;
             else if (c == 'D')

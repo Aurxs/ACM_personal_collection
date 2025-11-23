@@ -34,7 +34,7 @@ int main() {
             ans += v2[i];
             j++;
         }
-        if(j==n) break;
+        if (j == n) break;
     }
     cout << ans;
 }

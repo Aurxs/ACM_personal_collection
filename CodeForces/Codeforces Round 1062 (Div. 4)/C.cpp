@@ -17,8 +17,7 @@ void solve() {
         cin >> a[i];
         if (a[i] % 2 == 0) {
             even = true;
-        }
-        else {
+        } else {
             odd = true;
         }
     }

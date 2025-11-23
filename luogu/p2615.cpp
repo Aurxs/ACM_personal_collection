@@ -8,7 +8,7 @@ using namespace std;
 void solve() {
     int n;
     cin >> n;
-    vector<vector<int>> adj(n + 1, vector<int>(n + 1, 0));
+    vector<vector<int> > adj(n + 1, vector<int>(n + 1, 0));
     adj[1][(n + 1) / 2] = 1;
     int temp_x = 1, temp_y = (n + 1) / 2;
     for (int i = 2; i <= n * n; i++) {

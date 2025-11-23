@@ -9,8 +9,9 @@
 using namespace std;
 
 bool cmp(string a, string b) {
-    return a+b > b+a;
+    return a + b > b + a;
 }
+
 void solve() {
     int n;
     cin >> n;
@@ -18,7 +19,7 @@ void solve() {
     for (int i = 0; i < n; i++) {
         cin >> a[i];
     }
-    ranges::sort(a,cmp);
+    ranges::sort(a, cmp);
     for (int i = 0; i < n; i++) {
         cout << a[i];
     }

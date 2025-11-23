@@ -35,7 +35,6 @@ void solve() {
         else r = mid - 1;
     }
     cout << ans << endl;
-
 }
 
 int main() {

@@ -5,7 +5,7 @@
 using namespace std;
 
 int n;
-vector<vector<int>> solutions;
+vector<vector<int> > solutions;
 vector<int> current_path(10);
 
 // depth: 当前处理第几个配料 (0-9)

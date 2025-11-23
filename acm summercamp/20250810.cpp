@@ -8,7 +8,7 @@ using namespace std;
 void solve() {
     int n, k, x;
     cin >> n >> k >> x;
-    vector<vector<int>> c(n + 1);
+    vector<vector<int> > c(n + 1);
     for (int i = 1; i <= n; ++i) {
         int p;
         cin >> p;
@@ -28,12 +28,12 @@ void solve() {
         vector<int> to_dp;
         for (int j = 1; j <= n; ++j) {
             if (dp[j]) {
-                for (int child : c[j]) {
+                for (int child: c[j]) {
                     to_dp.push_back(child);
                 }
             }
         }
-        for (int x : to_dp) {
+        for (int x: to_dp) {
             dp[x] = true;
         }
     }

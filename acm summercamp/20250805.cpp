@@ -19,7 +19,7 @@ int main() {
         while (n--) {
             int x, y, d;
             cin >> x >> y >> d;
-            posts[(long long)x << 32 | (y + 100000)] = d; // y ∈ [-1e5,1e5]
+            posts[(long long) x << 32 | (y + 100000)] = d; // y ∈ [-1e5,1e5]
             x_coords.push_back(x);
         }
 
@@ -32,7 +32,7 @@ int main() {
 
         while (idx < x_coords.size()) {
             if (x == x_coords[idx]) {
-                long long key = (long long)x << 32 | (y + 100000);
+                long long key = (long long) x << 32 | (y + 100000);
                 if (posts.count(key)) {
                     sum++;
                     y += posts[key];

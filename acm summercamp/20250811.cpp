@@ -10,7 +10,7 @@ void solve() {
     int x, y, w;
     cin >> x >> y >> w;
     int t = x ^ y;
-    int n = std::bit_floor((unsigned int)t);
+    int n = std::bit_floor((unsigned int) t);
     if (n <= w) {
         cout << "Yes" << endl;
     } else {

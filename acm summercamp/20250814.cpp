@@ -5,7 +5,7 @@
 
 using namespace std;
 
-vector<vector<int>> adj;
+vector<vector<int> > adj;
 vector<int> a;
 vector<bool> visited;
 int temp_max;
@@ -13,7 +13,7 @@ int temp_max;
 void dfs(int u) {
     visited[u] = true;
     temp_max = max(temp_max, a[u]);
-    for (int v : adj[u]) {
+    for (int v: adj[u]) {
         if (!visited[v]) {
             dfs(v);
         }

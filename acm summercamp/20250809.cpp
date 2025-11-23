@@ -8,7 +8,7 @@ using namespace std;
 void solve() {
     int n, m;
     cin >> n >> m;
-    vector<vector<int>> mountain(n, vector<int>(m));
+    vector<vector<int> > mountain(n, vector<int>(m));
     int sum = m * n;
     int x = 1, y = sum / 2 + 1;
     for (int i = 0; i < n; i++) {

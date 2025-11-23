@@ -1,11 +1,10 @@
 #include <iostream>
 using namespace std;
 
-int main(){
+int main() {
     int a;
     cin >> a;
-    while (a--)
-    {
+    while (a--) {
         int n;
         long long V;
         cin >> n >> V;
@@ -13,18 +12,18 @@ int main(){
         for (int i = 0; i < n; ++i) {
             long long w;
             cin >> w;
-            total_w+=w;
+            total_w += w;
         }
         for (int i = 0; i < n; ++i) {
             long long v;
             cin >> v;
-            total_v+=v;
+            total_v += v;
         }
         if (total_w <= V) {
             cout << total_v << '\n';
         } else {
             cout << "-1\n";
-    }
+        }
     }
     return 0;
 }

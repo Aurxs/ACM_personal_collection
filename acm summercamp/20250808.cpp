@@ -37,7 +37,7 @@ void solve() {
             rounds = x - y;
         }
         ans += rounds;
-        for (long long val : temp_k) {
+        for (long long val: temp_k) {
             if (val - rounds > 0) {
                 pq.push(val - rounds);
             }

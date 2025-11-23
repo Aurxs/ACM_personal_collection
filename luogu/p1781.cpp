@@ -24,8 +24,8 @@ void solve() {
         cin >> a[i - 1].second;
         a[i - 1].first = i;
     }
-    ranges::sort(a,cmp);
-    cout << a[n-1].first << endl << a[n-1].second << endl;
+    ranges::sort(a, cmp);
+    cout << a[n - 1].first << endl << a[n - 1].second << endl;
 
 }
 

@@ -23,26 +23,6 @@ using namespace std;
 const long long BASE = 131;
 const long long MOD = 1e9 + 7;
 
-// 扩展欧几里得算法求逆元
-long long exgcd(long long a, long long b, long long &x, long long &y) {
-    if (b == 0) {
-        x = 1;
-        y = 0;
-        return a;
-    }
-    long long g = exgcd(b, a % b, y, x);
-    y -= a / b * x;
-    return g;
-}
-
-// 求模逆元
-long long modInv(long long a, long long m) {
-    long long x, y;
-    long long g = exgcd(a, m, x, y);
-    if (g != 1) return -1;
-    return (x % m + m) % m;
-}
-
 // 计算多项式滚动哈希
 long long computeHash(const string& s, long long base = BASE, long long mod = MOD) {
     long long hash = 0;
@@ -67,13 +47,13 @@ void generateMathematicalCollision(int n) {
         string s2(len, 'a');
         
         // 构造差异使得模运算后相同
-        // 例如：修改前两个字符
-        s1[0] = 'a';
+        // 每次迭代使用不同的字符位置来生成不同的碰撞对
+        s1[0] = char('a' + (i % 26));
         s1[1] = 'b';
         
         // 计算需要的补偿
         // (a - c) * BASE + (b - d) ≡ 0 (mod MOD)
-        s2[0] = 'b';
+        s2[0] = char('b' + (i % 25));
         s2[1] = 'a';
         
         cout << s1 << endl;
@@ -97,7 +77,6 @@ void generateWorstCase(int n) {
 
 // 方法3: 利用生日悖论暴力搜索碰撞
 void generateBirthdayAttack(int pairs) {
-    random_device rd;
     mt19937 gen(12345); // 使用固定种子以确保可重现
     uniform_int_distribution<> dis(0, 25);
     

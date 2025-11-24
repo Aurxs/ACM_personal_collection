@@ -16,7 +16,7 @@ void solve() {
     ranges::sort(a);                                    // 起点时间升序排序
     priority_queue<int, vector<int>, greater<int> > pq; //维护一个最小堆，内容为终点时间
     long long ans = 0;
-    // 因为起点时间升序排序，所以每次只需要维护一个大小为 k 的最小堆，堆顶元素即为当前第 k 大的终点时间
+    // 因为起点时间升序排序，所以每次只需要维护一个大小为 k 的最小堆，堆顶元素即为当前最小的终点时间
     // 最长时间为 堆顶元素 - 当前起点时间
     for (int i = 1; i <= n; i++) {
         pq.push(a[i].second);

@@ -27,7 +27,7 @@ int main() {
             } else {
                 cnttwo++;
             }
-            if (cntone >= 3 || cnttwo >= 6) {
+            if (cntone >= 3 || cnttwo >= 3) {
                 cout << "YES" << "\n";
                 flag = true;
                 break;

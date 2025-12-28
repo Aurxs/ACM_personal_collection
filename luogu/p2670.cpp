@@ -40,8 +40,7 @@ void solve() {
         for (int j = 1; j <= m; j++) {
             if (a[i][j] == -1) {
                 cout << '*';
-            }
-            else {
+            } else {
                 cout << a[i][j];
             }
         }

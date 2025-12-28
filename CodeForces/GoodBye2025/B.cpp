@@ -16,13 +16,13 @@ void solve() {
         ans++;
         s[0] = 's';
     }
-    for (int i = 2; i < s.size()-1; i++) {
+    for (int i = 2; i < s.size() - 1; i++) {
         if (s[i] == 'u' && s[i - 1] == 'u') {
             ans++;
             s[i] = 's';
         }
     }
-    if (s[s.size()-1]=='u') {
+    if (s[s.size() - 1] == 'u') {
         ans++;
         s[s.size()] = 's';
     }
